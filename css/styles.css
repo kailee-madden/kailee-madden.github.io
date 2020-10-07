@@ -369,7 +369,7 @@ a {
 
     .banner-content h2 {
         color: #00bfff;
-        font-size: 3.5em;
+        font-size: 2.5em;
         margin: 2% 0 30px;
         line-height: 1.2em;
         font-family: 'Roboto', sans-serif;
@@ -377,7 +377,7 @@ a {
     }
 
     .banner-content p {
-        font-size: 1.6em;
+        font-size: 1em;
         font-style: normal;
         color: #fff;
         font-family: 'Roboto', sans-serif;
