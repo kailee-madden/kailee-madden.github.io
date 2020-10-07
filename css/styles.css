@@ -209,11 +209,11 @@ a {
     padding: 0px;
     bottom: 40%;
     display: block;
-    height: 80px;
+    height: 200px;
 }
 
     .carousel-caption h1 {
-        font-size: 45px;
+        font-size: 36px;
         padding: 10px 15px;
         background: rgba(128, 180, 33, 0.80);
         color: #FFFFFF;
@@ -223,7 +223,7 @@ a {
     }
 
     .carousel-caption h3 {
-        font-size: 30px;
+        font-size: 20px;
         color: #1C4604;
         font-weight: bold;
         text-shadow: #fff 1px 1px 1px;
