@@ -65,24 +65,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px !important;
 }
 
-.button-outline {
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    vertical-align: middle;
-    zoom: 1;
-    color: #fff;
-    padding: 10px 25px;
-    border: 2px solid #fff;
-    border-radius: 0px;
-    font-size: 16px;
-    font-weight: 400;
-    background: rgba(255,255,255,0.15);
-}
-
-    .button-outline:hover {
-        color: #fff;
-        background: rgba(255,255,255,0.35);
-    }
 
 a {
     color: #00bfff;
@@ -172,62 +154,6 @@ a {
     top: 0px;
     border-bottom: 1px solid #D6D6D6;
 }
-
-.navbar-inverse .navbar-toggle {
-    border-color: #00bfff;
-    background-color: #00bfff;
-}
-
-    .navbar-inverse .navbar-toggle .icon-bar {
-        /*background-color: #00bfff;*/;
-    }
-
-    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-        background: #00bfff;
-    }
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #00bfff;
-}
-
-.navbar-inverse .navbar-toggle:hover .icon-bar {
-    background: #fff;
-}
-
-.navbar-toggle {
-}
-/*.carousel-inner*/
-#myCarousel {
-    margin-top: 50px;
-    border-bottom: 4px solid #00bfff;
-}
-
-.carousel-inner > .item {
-}
-
-.carousel-caption {
-    padding: 0px;
-    bottom: 40%;
-    display: block;
-    height: 80px;
-}
-
-    .carousel-caption h1 {
-        font-size: 45px;
-        padding: 10px 15px;
-        background: rgba(128, 180, 33, 0.80);
-        color: #FFFFFF;
-        text-shadow: none;
-        font-weight: bold;
-        display: inline-block;
-    }
-
-    .carousel-caption h3 {
-        font-size: 30px;
-        color: #1C4604;
-        font-weight: bold;
-        text-shadow: #fff 1px 1px 1px;
-    }
 
 .actionPanel {
     padding: 25px 0;
@@ -347,7 +273,7 @@ a {
     position: relative;
     padding: 0px;
     box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
-    /*background: url("../images/banner-bg.jpg") no-repeat;*/
+    background: #25272C;
     background-size: 100% 100%;
     background-size: cover;
     margin-top: 60px;
@@ -362,9 +288,9 @@ a {
 .banner-content {
     position: absolute;
     z-index: 3;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 30px;
+    left:30px;
+    right: 30px;
 }
 
     .banner-content h2 {
@@ -383,10 +309,6 @@ a {
         font-family: 'Roboto', sans-serif;
         text-shadow: 1px 1px 1px #8F8F8F;
     }
-
-.da-slider {
-    margin: 0 auto !important;
-}
 
 .sub-heading {
     padding: 15px 0;
@@ -442,75 +364,7 @@ a {
     box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset, 1px 1px 1px rgba(255,255,255,0.1);
     border: 2px solid #00bfff;
 }
-/* Services
-    -------------------------------------------------*/
-.grid .text-content {
-    padding-left: 35%;
-}
 
-.grid .text-content {
-    display: block;
-    padding-left: 19%;
-    padding-right: 8%;
-}
-
-.grid .grid-item {
-}
-
-.grid .text-content h5 {
-    font-weight: bold;
-}
-
-.grid .grid-item .item-content {
-    display: block;
-    outline: none;
-    text-decoration: none;
-    padding: 20px 0;
-}
-
-.item-content .fa {
-    position: absolute;
-    color: #646464;
-    font-size: 4.5em;
-    top: 36px;
-}
-/* Team
-    ---------------------------------------------------*/
-.team-member {
-    margin-bottom: 15px;
-}
-
-.member-img {
-    overflow: hidden;
-}
-
-.team-member .member-img img {
-    max-width: 250px;
-    margin: 0 auto;
-}
-
-.team-member h4 {
-    font-size: 19px;
-    line-height: 32px;
-    margin: 10px 0 0;
-    text-align: center;
-}
-
-.team-member .pos {
-    display: block;
-    margin: 0;
-    text-align: center;
-}
-
-.team-member .contact a {
-    padding: 0 8px;
-}
-
-.team-socials a {
-    background: white;
-    padding: 7px 0;
-    margin: 2px;
-}
 
 #contactUs {
     /*background: #00bfff;*/
@@ -1034,59 +888,6 @@ footer {
 #clients {
     background: #fff;
 }
-/*Price table*/
-.flat .plan {
-    border-radius: 0px;
-    list-style: none;
-    padding: 0 0 20px;
-    margin: 0 0 15px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.29) !important;
-}
-
-    .flat .plan li {
-        padding: 10px 15px;
-        color: #ccc;
-        border-top: 1px solid #f5f5f5;
-        -webkit-transition: 300ms;
-        transition: 300ms;
-    }
-
-        .flat .plan li.plan-price {
-            border-top: 0;
-        }
-
-        .flat .plan li.plan-name {
-            border-radius: 0;
-            padding: 15px;
-            font-size: 24px;
-            line-height: 24px;
-            color: #fff;
-            background: #4E4E4E;
-            margin-bottom: 30px;
-            border-top: 0;
-        }
-
-        .flat .plan li > strong {
-            color: #6B6B6B;
-            font-weight: normal;
-        }
-
-        .flat .plan li.plan-action {
-            margin-top: 10px;
-            border-top: 0;
-        }
-
-    .flat .plan.featured {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
-        .flat .plan.featured:hover li.plan-name, .flat .plan:hover li.plan-name, .flat .plan.featured.plan-name {
-            background: #00bfff !important;
-        }
 
 .customNavigation {
     display: none;
