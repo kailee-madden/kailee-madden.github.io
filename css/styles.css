@@ -178,58 +178,6 @@ a {
     line-height: 42px;
     clear: both;
 }
-/*----Nav ----*/
-.header .navbar-brand {
-    float: left;
-    padding: 16px 15px;
-    line-height: 18px;
-    height: 50px;
-    /*color:#00bfff;*/;
-}
-
-.navbar-brand b {
-    color: #000;
-}
-
-.logo {
-    font-size: 2.2em;
-    text-shadow: none;
-    margin: 8px 0 0 0;
-}
-
-    .logo:hover {
-        color: #5A5A5A;
-    }
-
-.header .navbar {
-    margin: 0;
-    background: #fff;
-    border: 0;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #858585;
-    font-size: 1.2em;
-    line-height: normal;
-    margin: 17px;
-    padding: 6px 10px !important;
-    border-radius: 5px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-}
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #00bfff;
-    background: none;
-}
-
-.navbar-nav > li:hover > a {
-    color: #00bfff;
-}
-
-.header .navbar-nav > li > a {
-    padding: 25px 18px;
-}
 
 .page-section {
     width: 100%;
@@ -275,39 +223,25 @@ a {
     margin: auto;
     padding: 0px;
     box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
-    background: #25272C;
+    background: #000;
     margin-top: 60px;
     position: relative;
     border-bottom: 2px #00bfff solid;
 }
-
-.photo-content {
-    height:75%; width:125px; 
-}
-
-.text-content {
-    height:75%; 
-    width:50%; 
-    border-style:solid; 
-    border-width:1px; 
-    float:left;
-}
-
-    .banner-content h2 {
-        color: #00bfff;
-        font-size: 3.5em;
-        margin: 2% 0 30px;
-        line-height: 1.2em;
-        font-family: 'Roboto', sans-serif;
-        text-shadow: 1px 1px 1px #8F8F8F;
+.banner-container h2 {
+    color: #00bfff;
+    font-size: 3.5em;
+    margin: 2% 0 30px;
+    line-height: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 1px #8F8F8F;
     }
-
-    .banner-content p {
-        font-size: 1.6em;
-        font-style: normal;
-        color: #fff;
-        font-family: 'Roboto', sans-serif;
-        text-shadow: 1px 1px 1px #8F8F8F;
+.banner-container p {
+    font-size: 1.6em;
+    font-style: normal;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 1px #8F8F8F;
     }
 
 .sub-heading {
@@ -366,40 +300,6 @@ a {
 }
 
 
-#contactUs {
-    /*background: #00bfff;*/
-}
-
-    #contactUs .btn {
-        background: rgba(255, 255, 255, 0.29);
-    }
-
-.descrition {
-    min-height: 90px;
-    /*text-align: center;*/
-    /*border-bottom: 1px solid #dadde2;*/
-    padding: 5px 15px;
-}
-
-.team-member {
-    padding-top: 5px;
-}
-
-.team-socials {
-    margin: 15px 0;
-    display: block;
-    text-align: center;
-}
-
-    .team-socials i {
-        width: 35px;
-        height: 35px;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        font-size: 18px;
-    }
-/* ------- */
 
 .isotopeWrapper article {
     margin-bottom: 30px;
@@ -538,21 +438,8 @@ nav#filter {
         color: #fff;
     }
 
-.back-to-top {
-    display: inline-block;
-    clear: both;
-    background: #fff;
-    color: #333;
-    padding: 0 10px 5px;
-    margin: 20px 0 0;
-    text-shadow: none;
-}
 
-    .back-to-top:hover {
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-    }
+
 
 hr {
     border-color: #ddd;
@@ -563,37 +450,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#navigation {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background: #ffffff;
-    box-shadow: 0 10px 10px -10px #000000;
-}
 
-    #navigation > li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-        #navigation > li > a {
-            margin: 1px;
-            color: #000000;
-            background: #cccccc;
-            display: block;
-            padding: 5px;
-            text-decoration: none;
-            transition: all 400ms;
-        }
-
-            #navigation > li > a.current,
-            #navigation > li:hover > a {
-                background: #999999;
-            }
 
 .pageSection {
     min-height: 600px;
@@ -617,45 +474,7 @@ footer {
     background: #fff;
 }
 
-.social a:hover {
-    color: #00bfff;
-}
 
-.social a {
-    font-size: 32px;
-    margin: 0 10px;
-    color: #c7c7c7;
-}
-
-.contact ul li {
-    margin-bottom: 10px;
-}
-
-    .contact ul li i {
-        margin-right: 15px;
-    }
-/*Clients*/
-.clients #owl-demo .item {
-    background: none;
-}
-
-.clients .helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-    .clients .helper img {
-        vertical-align: middle;
-        max-height: 70px;
-        max-width: 80%;
-    }
-
-.clients .customNavigation > a {
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0px 5px;
-}
 
 @media (min-width: 768px) {
     .header .navbar-brand {
