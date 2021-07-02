@@ -1,4 +1,0 @@
-Working on an internal firm contribution to create a complex agent-based modeling simulation
-for the future of the health care system. My role is both to help come up with the mathematical
-formulas and probability models that anchored the simulation, as well as to assist with some of
-the programming in Python to implement the model.
