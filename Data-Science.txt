@@ -1,10 +1,11 @@
-Have worked on a Navy project doing a mix of data science, analysis, data pipeline engineering, and product management. 
-This involves validating, preprocessing, and cleaning data, visualizing data in Tableau dashboards, 
-working to automate the data ingestion process, leveraging a variety of tools and capabilities, 
-such as Smartsheets and Python scripting, to further this automation process, directly presenting and 
-working with clients on the rollout process, using Agile Scrum sprint methodology to manage time and scope, 
-QA'ing current and previous products, and building out product requirements.
+As a Consultant at Deloitte, I take on the role that my client is looking to fill, while simultaneously pushing them to think beyond defined requirements to further optimization and time-saving efforts.
 
-Assisted in an internal financial analysis effort for the Southern California Geo that required gather financial data 
-from four sources, validating that data, aggregating it together using Excel Macros that I wrote, and providing digestable
-summary statistics.
+Data Scientist at Center for Analytics, Department of State
+• Wrangled coronavirus data using Python scripts, stored the wrangled data in MS SQL server, and visualized the data in printable Tableau dashboard reports.
+• Facilitated client meetings with high level executives to define product requirements for a report going directly to the Secretary of State.
+• Researched open source data then set up data pipelines to automate the process of pulling, wrangling, and storing the data.
+
+Data Analyst/Product Developer at Force Readiness Analytics Group, Naval Aviation
+• Developed 15 Tableau workbooks, containing 37 dashboards, with over 10,000 views leveraging millions of records of data to save countless hours of work and generate new actionable insights to optimize mission readiness for the fleet.
+• My products were recognized by highest-ranking officer in Naval Aviation, the Air Boss, who mandated the use of said products.
+• Managed Deloitte team of three (onboarding, task assignment, and personal development), facilitated client meetings, utilized Agile Scrum methodology, and owned end-to-end deliverables using Tableau, Python, VBA, and SharePoint development.
