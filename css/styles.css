@@ -279,7 +279,12 @@ a {
     margin-top: 60px;
     position: relative;
     border-bottom: 2px #00bfff solid;
+    font-size:140%
 }
+.banner-container > img {
+    width: 325px;
+    height: 325px;
+        }
 
 .photo-content {
     height:75%; width:125px; 
@@ -657,7 +662,7 @@ footer {
     margin: 0px 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
     }
@@ -744,11 +749,12 @@ footer {
     .banner-container {
         background-size: contain;
         margin-top: 88px;
+        font-size: 70%;
     }
 
         .banner-container > img {
-            width: 160px;
-            height: 160px;
+            width: 70%;
+            height: 70%;
         }
 
     .da-slide h2 {
