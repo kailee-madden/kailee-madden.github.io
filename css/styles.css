@@ -282,8 +282,8 @@ a {
     font-size:140%
 }
 .banner-container > img {
-    width: 325px;
-    height: 325px;
+    width: 525px;
+    height: 525px;
         }
 
 .photo-content {
@@ -753,8 +753,8 @@ footer {
     }
 
         .banner-container > img {
-            width: 70%;
-            height: 70%;
+            width: 40%;
+            height: 40%;
         }
 
     .da-slide h2 {
