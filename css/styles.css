@@ -657,7 +657,7 @@ footer {
     margin: 0px 5px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .header .navbar-brand {
         padding-left: 0;
     }
@@ -665,8 +665,8 @@ footer {
         font-size: 140%;
     }
         .banner-container > img {
-            width: 320px;
-            height: 320px;
+            width: 220px;
+            height: 220px;
         }
 
     .navbar-nav {
