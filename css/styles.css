@@ -661,6 +661,13 @@ footer {
     .header .navbar-brand {
         padding-left: 0;
     }
+    .banner-container {
+        font-size: 140%;
+    }
+        .banner-container > img {
+            width: 320px;
+            height: 320px;
+        }
 
     .navbar-nav {
         float: right;
@@ -679,10 +686,6 @@ footer {
     .banner-container {
         background-size: contain;
     }
-        .banner-container > img {
-            width: 320px;
-            height: 320px;
-        }
 
     .da-slide h2 {
         font-size: 28px;
@@ -741,7 +744,6 @@ footer {
     .banner-container {
         background-size: contain;
         margin-top: 88px;
-        font-size: 70%;
     }
 
         .banner-container > img {
