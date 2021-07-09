@@ -658,10 +658,6 @@ footer {
     .banner-container {
         font-size: 140%;
     }
-        .banner-container > img {
-            width: 220px;
-            height: 220px;
-        }
 
     .navbar-nav {
         float: right;
