@@ -281,22 +281,11 @@ a {
     border-bottom: 2px #00bfff solid;
     font-size:140%
 }
-.banner-container > img {
-    width: 525px;
-    height: 525px;
-        }
 
-.photo-content {
-    height:75%; width:125px; 
-}
-
-.text-content {
-    height:75%; 
-    width:50%; 
-    border-style:solid; 
-    border-width:1px; 
-    float:left;
-}
+    .banner-content img {
+        width: 525px;
+        height: 525px;
+    }
 
     .banner-content h2 {
         color: #00bfff;
