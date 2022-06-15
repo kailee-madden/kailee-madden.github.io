@@ -1,1 +1,0 @@
-A private repository is available upon request (due to academic integrity rules I cannot make it public). The repository contains work such as basic implementations for Queue and Sets, as well as more complex projects, such as using Huffman coding trees to compress and decompress files.
