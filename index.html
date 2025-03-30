@@ -1,222 +1,71 @@
-<!doctype html>
-<html lang="en-gb" class="no-js">
-	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <title>Kailee Madden's Website</title>
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
-    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <script>
+        // Dark/Light Mode Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeToggle = document.getElementById("theme-toggle");
+            const currentTheme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", currentTheme);
+            
+            themeToggle.checked = currentTheme === "dark";
+            themeToggle.addEventListener("change", function () {
+                const newTheme = themeToggle.checked ? "dark" : "light";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+            });
+        });
+    </script>
 </head>
-
 <body>
-    <header class="header">
-        <section id="section-top" class="section section-top">
-            <div class="container">
-                <div class="row">
-                    <div class="region region-top-first col-xs-12 col-sm-8 col-md-7 col-lg-7">
-                        <div class="block-contents ">
-
-                            <div class="content">
-                                <ul>
-				    <li><a href="mailto:kailee.madden@gmail.com"><span data-toggle="tooltip" data-placement="bottom" class="superhero-tooltip" data-original-title="Email"><i class="fa fa-envelope"><span></span></i></span></a></li>
-				    <li><a href="tel:2067942280"><span data-toggle="tooltip" data-placement="bottom" class="superhero-tooltip" data-original-title="Phone"><i class="fa fa-phone"><span></span></i></span></a></li>
-                                    <li><a href="https://twitter.com/SanDiegoSurf5"><span data-toggle="tooltip" data-placement="bottom" class="superhero-tooltip" data-original-title="Twitter"><i class="fa fa-twitter"><span></span></i></span></a></li>
-				    <li><a href="https://github.com/kailee-madden/"><span data-toggle="tooltip" data-placement="bottom" class="superhero-tooltip" data-original-title="GitHub"><i class="fa fa-github-square"><span></span></i></span></a></li>
-                                    <li><a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/"><span data-toggle="tooltip" data-placement="bottom" class="superhero-tooltip" data-original-title="Linkedin"><i class="fa fa-linkedin"><span></span></i></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style="clear: both" class="clear-fix"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li> <!--To do add in real resume-->
+                <a href="resume.pdf" class="button" download>Download Resume</a>
+                <li><a href="#projects">View My Work</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <label>
+                        <input type="checkbox" id="theme-toggle"> Dark Mode
+                    </label>
+                </li>
+            </ul>
+        </nav>
     </header>
-
-    <section id="home">
-       <div class="banner-container">
-	       <img src="images/IMG_5388.png" height="265" width="265" style="float:right">
-	       <br/>
-	       <p style="color:#F8F0E3;padding-left: 10px;text-align:left;font-size:16px;"> <b>Skills:</b> C++/C, Python, Golang, Git, CUDA, OpenMP, Software Development, Performance Engineering </p>
-	       <p style="color:#F8F0E3;padding-left: 10px;text-align:left;font-size:16px;"> <b>Academics:</b> MS at UC San Diego in Computational Science, Mathematics, and Engineering. BA at Notre Dame in Mathematics and History.</p>
-	       <p style="color:#F8F0E3;padding-left: 10px;text-align:left;font-size:16px;"> <b>Work:</b> Cloud Software Development Engineer Intern at Intel working on Performance Engineering and Automation </p>
-	       <p style="color:#F8F0E3;padding-left: 10px;text-align:left;font-size:16px;"> Spare time activites include surfing, skateboarding, and baking! </p>
-	       <p style="color:#F8F0E3;padding-left: 10px;text-align:left;font-size:16px;"> Some of my projects can be found below, such as a Spotify Recommendation Flask based Web App, Networking projects, and Parallel Processing projects.</p>
-	       </br>
-
-       </div>
-    </section>
-   
-    <section id="portfolio" class="page-section section appear clearfix">
-        <div class="container">
-            <div class="heading text-center">
-                <h2 style="font-size:20px;">Projects</h2>
-                <p style="color:#F8F0E3;font-size:16px;">Here are some projects that I've worked on from school, work, and individually. All the photos are my own, taken on various outdoor adventures!</p>
-            </div>
-
-            <div class="row">
-                <nav id="filter" class="col-md-12 text-center">
-                    <ul>
-                        <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".math">Mathematics</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".se">Software Engineering</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".writing">Writing</a></li>
-                    </ul>
-                </nav>
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-                            <article class="col-sm-4 isotopeItem math writing">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img1.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="pdf/Madden.Thesis19.pdf" class="fancybox">
-                                                <h5>Mathematical Logic History Thesis</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem math se writing">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img2.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Topological-Data-Analysis" class="fancybox">
-                                                <h5>Topological Data Analysis</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-
-                            <article class="col-sm-4 isotopeItem se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img3.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Twitter-Bot-on-AWS" class="fancybox">
-                                                <h5>AWS Surf Forecast Twitter Bot </h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img4.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon" class="fancybox">
-                                                <h5>Blockchain and Ethical AI Hackathon Winner</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img5.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="Networking.md" class="fancybox">
-                                                <h5>Networked Systems</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem se math writing">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img6.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/FFT-and-Wave-Forecasting" class="fancybox">
-                                                <h5>Fast Fourier Transform for Surf Forecasting</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem math se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img7.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Numerical-Methods" class="fancybox">
-                                                <h5>Numerical Analysis and Methods</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem writing se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img8.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Parallel-Processing" class="fancybox">
-                                                <h5>Parallel Processing</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem se">
-                                <div class="portfolio-item">
-                                    <img src="images/portfolio/img9.jpg" alt="" />
-                                    <div class="portfolio-desc align-center">
-                                        <div class="folio-info">
-                                            <a href="https://github.com/kailee-madden/Flask-Project" class="fancybox">
-                                                <h5>Spotify Recommendation Flask Web App</h5>
-                                                <i class="fa fa-link fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 text-center">
-                    Modified from a base template by <a href="http://webThemez.com">WebThemez.com</a>        
-                </div>
-            </div>
-        </div>
-	
-    <script src="js/modernizr-latest.js"></script>
-    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
-    <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-    <script src="js/jquery.nav.js" type="text/javascript"></script>
-    <script src="js/custom.js" type="text/javascript"></script>
-
-
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2> <!--To do put in headshot and details-->
+            <img src="headshot.jpg" alt="My Headshot" style="width:150px; border-radius:50%;">
+            <p>Senior Software Engineer | Backend | Cloud | DevOps </p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Coming soon...</p>
+        </section>
+        
+        <section id="blog">
+            <h2>Blog</h2> <!--To do figure out where to put your writings/pdfs-->
+            <p>Check out my writings on <a href="https://github.com/yourgithub/blog" target="_blank">GitHub</a>.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:kailee.madden@gmail.com">kailee.madden@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/kailee-madden" target="_blank">github.com/kailee-madden</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/" target="_blank">linkedin.com/kailee-madden</a></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Kailee Madden. All rights reserved.</p>
+    </footer>
 </body>
 </html>
