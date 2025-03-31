@@ -5,17 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kailee's Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e6e0f8, #c2b6e4);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile-container img {
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .buttons a {
+            margin: 10px;
+        }
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 20px;
+        }
+        a {
+            color: #4b0082;
+        }
+        a:hover {
+            color: #3a0066;
+        }
+        body[data-theme="dark"] {
+            background: linear-gradient(135deg, #1a0e2d, #12081f);
+            color: white;
+        }
+        [data-theme="dark"] a {
+            color: #c6a1d1; 
+        }
+        [data-theme="dark"] a:hover {
+            color: #9e79c0; 
+        }
+        [data-theme="dark"] .profile-container strong {
+            color: #d3d3d3; 
+        }
+        [data-theme="dark"] .profile-container span {
+            color: #d3d3d3; 
+        }
+    </style>
     <script>
         // Dark/Light Mode Toggle
         document.addEventListener("DOMContentLoaded", function () {
             const themeToggle = document.getElementById("theme-toggle");
             const currentTheme = localStorage.getItem("theme") || "light";
-            document.documentElement.setAttribute("data-theme", currentTheme);
+            document.body.setAttribute("data-theme", currentTheme);
             
             themeToggle.checked = currentTheme === "dark";
             themeToggle.addEventListener("change", function () {
                 const newTheme = themeToggle.checked ? "dark" : "light";
-                document.documentElement.setAttribute("data-theme", newTheme);
+                document.body.setAttribute("data-theme", newTheme);
                 localStorage.setItem("theme", newTheme);
             });
         });
@@ -23,30 +83,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><strong style="font-size: 2em;">Kailee Madden</strong><br><span style="font-size: 1.2em; color: gray;">Senior Software Engineer</span></li>
-            </ul>
-            <ul>
-                <li><a href="#about">About</a></li> <!--To do add in real resume-->
-                <a href="resume.pdf" class="button" download>Download Resume</a>
-                <li><a href="#projects">View My Work</a></li>
-                <li><a href="#writing">Writing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
-                    <label>
-                        <input type="checkbox" id="theme-toggle"> Dark Mode
-                    </label>
-                </li>
-            </ul>
-        </nav>
+        <div class="profile-container">
+            <img src="images/IMG_5388.png" alt="Kailee Madden's Headshot">
+            <div>
+                <strong style="font-size: 2.5em;">Kailee Madden</strong><br>
+                <span style="font-size: 1.5em;">Senior Software Engineer</span>
+                <div class="buttons">
+                    <a href="resume.pdf" class="button" download>Download Resume</a>
+                    <a href="#projects" class="button">View My Work</a>
+                    <a href="#contact" class="button">Get In Touch</a>
+                    <div class="theme-toggle-container">
+                        <label for="theme-toggle">Dark Mode</label>
+                        <input type="checkbox" id="theme-toggle">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     
     <main>
-        <section id="about">
-            <h2>About Me</h2> <!--To do put in headshot and details-->
-            <img src="images/IMG_5388.png" alt="My Headshot" style="width:150px; border-radius:50%;">
-            <p>Senior Software Engineer | Backend | Cloud | DevOps </p>
+        <section>
+            <p>Senior Software Engineer | Backend | Cloud | DevOps</p>
         </section>
         
         <section id="projects">
@@ -55,8 +112,8 @@
         </section>
         
         <section id="writing">
-            <h2>Writing</h2> <!--To do figure out where to put your writings/pdfs-->
-            <p>Check out my writings on technical topics from javascript testing frameworks to mathematical logic theorems</p>
+            <h2>Writing</h2>
+            <p>Check out my writings on technical topics from JavaScript testing frameworks to mathematical logic theorems</p>
         </section>
         
         <section id="contact">
