@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kailee's Website</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet" />
   <style>
     body {
       background: linear-gradient(135deg, #e6e0f8, #c2b6e4);
@@ -67,9 +66,8 @@
       color: #d3d3d3;
     }
 
-    /* Pull top section closer to header */
     main section:first-of-type {
-      margin-top: -20px;
+      margin-top: -30px;
       padding-top: 0;
     }
 
@@ -132,7 +130,6 @@
   }
   </style>
   <script>
-    // Dark/Light Mode Toggle
     document.addEventListener("DOMContentLoaded", function () {
       const themeToggle = document.getElementById("theme-toggle");
       const currentTheme = localStorage.getItem("theme") || "light";
@@ -187,7 +184,6 @@
             <i class="icon" data-lucide="shield-check"></i>
             <span>Deloitte Hackathon Winner – Secure Image Verification on Blockchain</span>
           </a>
-          <!-- Add more project cards with icons like "server", "cloud", "code", etc. -->
         </div>
       </section>
       
@@ -200,7 +196,7 @@
             <span>Gödel's Incompleteness Theorems – Senior Thesis</span>
           </a>
           <a href="pdf/An Introduction to Topological Data Analysis.pdf" target="_blank">
-            <i class="icon" data-lucide="graph"></i>
+            <i class="icon" data-lucide="torus"></i>
             <span>Intro to Topological Data Analysis – Published at Deloitte</span>
           </a>
         </div>
@@ -214,6 +210,7 @@
       <p>LinkedIn: <a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/" target="_blank">linkedin.com/kailee-madden</a></p>
     </section>
   </main>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
   </script>
