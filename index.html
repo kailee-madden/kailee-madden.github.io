@@ -1,134 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kailee's Website</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #e6e0f8, #c2b6e4);
-            color: #333;
-            text-align: center;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .profile-container img {
-            width: 120px;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-        .buttons {
-            margin-top: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .buttons a {
-            margin: 10px;
-        }
-        .theme-toggle-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-left: 20px;
-        }
-        a {
-            color: #0056b3;
-        }
-        a:hover {
-            color: #004494;
-        }
-        body[data-theme="dark"] {
-            background: linear-gradient(135deg, #1a0e2d, #12081f);
-            color: white;
-        }
-        [data-theme="dark"] a {
-            color: #66d9ff; 
-        }
-        [data-theme="dark"] a:hover {
-            color: #33c4ff; 
-        }
-        [data-theme="dark"] .profile-container strong {
-            color: #d3d3d3; 
-        }
-        [data-theme="dark"] .profile-container span {
-            color: #d3d3d3; 
-        }
-    </style>
-    <script>
-        // Dark/Light Mode Toggle
-        document.addEventListener("DOMContentLoaded", function () {
-            const themeToggle = document.getElementById("theme-toggle");
-            const currentTheme = localStorage.getItem("theme") || "light";
-            document.body.setAttribute("data-theme", currentTheme);
-            
-            themeToggle.checked = currentTheme === "dark";
-            themeToggle.addEventListener("change", function () {
-                const newTheme = themeToggle.checked ? "dark" : "light";
-                document.body.setAttribute("data-theme", newTheme);
-                localStorage.setItem("theme", newTheme);
-            });
-        });
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kailee's Website</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #e6e0f8, #c2b6e4);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+    .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile-container img {
+      width: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .buttons a {
+      margin: 10px;
+    }
+    .theme-toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 20px;
+    }
+    a {
+      color: #0056b3;
+    }
+    a:hover {
+      color: #004494;
+    }
+    body[data-theme="dark"] {
+      background: linear-gradient(135deg, #1a0e2d, #12081f);
+      color: white;
+    }
+    [data-theme="dark"] a {
+      color: #66d9ff;
+    }
+    [data-theme="dark"] a:hover {
+      color: #33c4ff;
+    }
+    [data-theme="dark"] .profile-container strong,
+    [data-theme="dark"] .profile-container span {
+      color: #d3d3d3;
+    }
+
+    /* Pull top section closer to header */
+    main section:first-of-type {
+      margin-top: -20px;
+      padding-top: 0;
+    }
+
+    .top-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      text-align: left;
+      padding: 1rem 2rem;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    .top-summary p {
+      margin: 0.5rem 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .grid a {
+      display: block;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .grid a:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] .grid a {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="dark"] .grid a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+  <script>
+    // Dark/Light Mode Toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const themeToggle = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme") || "light";
+      document.body.setAttribute("data-theme", currentTheme);
+
+      themeToggle.checked = currentTheme === "dark";
+      themeToggle.addEventListener("change", function () {
+        const newTheme = themeToggle.checked ? "dark" : "light";
+        document.body.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+    });
+  </script>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="images/IMG_5388.png" alt="Kailee Madden's Headshot">
-            <div>
-                <strong style="font-size: 2.5em;">Kailee Madden</strong><br>
-                <span style="font-size: 1.5em;">Senior Software Engineer</span>
-                <div class="buttons">
-                    <a href="resume.pdf" class="button" download>Download Resume</a>
-                    <a href="#projects" class="button">View My Work</a>
-                    <a href="#contact" class="button">Get In Touch</a>
-                    <div class="theme-toggle-container">
-                        <label for="theme-toggle">Dark Mode</label>
-                        <input type="checkbox" id="theme-toggle">
-                    </div>
-                </div>
-            </div>
+  <header>
+    <div class="profile-container">
+      <img src="images/IMG_5388.png" alt="Kailee Madden's Headshot" />
+      <div>
+        <strong style="font-size: 2.5em;">Kailee Madden</strong><br />
+        <span style="font-size: 1.5em;">Senior Software Engineer</span>
+        <div class="buttons">
+          <a href="resume.pdf" class="button" download>Download Resume</a>
+          <a href="#projects" class="button">View My Work</a>
+          <a href="#contact" class="button">Get In Touch</a>
+          <div class="theme-toggle-container">
+            <label for="theme-toggle">Dark Mode</label>
+            <input type="checkbox" id="theme-toggle" />
+          </div>
         </div>
-    </header>
-    
-    <main>
-        <section>
-            <p>Senior Software Engineer | Backend | Cloud | DevOps</p>
-            <p>I'm a senior full-stack software engineer with focus on backend and a strong background in building scalable, high-impact solutions across cloud ecosystems like AWS and Azure. I’ve architected and led the development of critical APIs, serverless backends, and real-time data pipelines used by hundreds of thousands of users daily. With experience spanning dynamic routing systems, authentication/authorization infrastructure, and data-intensive platforms, I combine deep technical expertise with leadership experience to drive projects from concept to production. I’ve also worked extensively with modern tools and frameworks including .NET, JavaScript/TypeScript, Python, Terraform, and React - always with a focus on performance, maintainability, and user value</p>
-            <p>Master of Science in Computational Science, Mathematics and Engineering at the University of California San Diego</p>
-            <p>Bachelor of Arts in Mathematics and History at the University of Notre Dame</p>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <li><a href="https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon" target="_blank">Deloitte Hackathon Winning Project - A Secure Image Verifaction Blockchain Application</a></li>
-        </section>
-        
-        <section id="writing">
-            <h2>Writing</h2>
-            <p>Check out my writings on technical topics from JavaScript testing frameworks to mathematical logic theorems</p>
-            <ul>
-                <li><a href="pdf/Madden.Thesis19.pdf" target="_blank">An Intellectual History of Godel's Incompleteness Theorems - University of Notre Dame Thesis</a></li>
-                <li><a href="pdf/An Introduction to Topological Data Analysis.pdf" target="_blank">An Introduction to Topological Data Analysis - Article Published in Deloitte Internal Journal</a></li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:kailee.madden@gmail.com">kailee.madden@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/kailee-madden" target="_blank">github.com/kailee-madden</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/" target="_blank">linkedin.com/kailee-madden</a></p>
-        </section>
-    </main>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="top-summary">
+      <div>
+        <p>Senior Software Engineer | Backend | Cloud | DevOps</p>
+        <p>I’m a backend-focused senior engineer building scalable, secure systems in AWS and Azure. I’ve led the development of cloud-native APIs, serverless apps, and real-time data platforms used by 100k+ users daily. I’m passionate about clean architecture, performance, and user value.</p>
+      </div>
+      <div>
+        <p><strong>Education</strong></p>
+        <p>Master of Science in Computational Science, Mathematics and Engineering<br />University of California San Diego</p>
+        <p>Bachelor of Arts in Mathematics and History<br />University of Notre Dame</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div><a href="https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon" target="_blank">Deloitte Hackathon Winning Project - A Secure Image Verification Blockchain Application</a></div>
+        <!-- Add more projects here -->
+      </div>
+    </section>
+
+    <section id="writing">
+      <h2>Writing</h2>
+      <p>Check out my writings on technical topics from JavaScript testing frameworks to mathematical logic theorems</p>
+      <div class="grid">
+        <div><a href="pdf/Madden.Thesis19.pdf" target="_blank">An Intellectual History of Gödel's Incompleteness Theorems - University of Notre Dame Thesis</a></div>
+        <div><a href="pdf/An Introduction to Topological Data Analysis.pdf" target="_blank">An Introduction to Topological Data Analysis - Published in Deloitte Internal Journal</a></div>
+        <!-- Add more writings here -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kailee.madden@gmail.com">kailee.madden@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/kailee-madden" target="_blank">github.com/kailee-madden</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/" target="_blank">linkedin.com/kailee-madden</a></p>
+    </section>
+  </main>
 </body>
 </html>
+
