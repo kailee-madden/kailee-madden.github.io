@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kailee's Website</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet" />
   <style>
     body {
       background: linear-gradient(135deg, #e6e0f8, #c2b6e4);
@@ -95,24 +96,40 @@
     }
 
     .grid a {
-      display: block;
-      background-color: rgba(255, 255, 255, 0.6);
-      padding: 1rem;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+  }
 
-    .grid a:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
+  .grid a:hover {
+    transform: translateY(-4px);
+    background-color: rgba(0, 0, 0, 0.07);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
 
-    [data-theme="dark"] .grid a {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
+  [data-theme="dark"] .grid a {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
-    [data-theme="dark"] .grid a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+  [data-theme="dark"] .grid a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .icon {
+    min-width: 24px;
+    min-height: 24px;
+    color: #5c4f99;
+  }
+
+  [data-theme="dark"] .icon {
+    color: #a29bff;
+  }
   </style>
   <script>
     // Dark/Light Mode Toggle
@@ -153,7 +170,7 @@
   <main>
     <section class="top-summary">
       <div>
-        <p>Senior Software Engineer | Backend | Cloud | DevOps</p>
+        <p><strong>Summary</strong></p>
         <p>I’m a backend-focused senior engineer building scalable, secure systems in AWS and Azure. I’ve led the development of cloud-native APIs, serverless apps, and real-time data platforms used by 100k+ users daily. I’m passionate about clean architecture, performance, and user value.</p>
       </div>
       <div>
@@ -164,22 +181,31 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div><a href="https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon" target="_blank">Deloitte Hackathon Winning Project - A Secure Image Verification Blockchain Application</a></div>
-        <!-- Add more projects here -->
-      </div>
-    </section>
-
-    <section id="writing">
-      <h2>Writing</h2>
-      <p>Check out my writings on technical topics from JavaScript testing frameworks to mathematical logic theorems</p>
-      <div class="grid">
-        <div><a href="pdf/Madden.Thesis19.pdf" target="_blank">An Intellectual History of Gödel's Incompleteness Theorems - University of Notre Dame Thesis</a></div>
-        <div><a href="pdf/An Introduction to Topological Data Analysis.pdf" target="_blank">An Introduction to Topological Data Analysis - Published in Deloitte Internal Journal</a></div>
-        <!-- Add more writings here -->
-      </div>
-    </section>
+        <h2>Projects</h2>
+        <div class="grid">
+          <a href="https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon" target="_blank">
+            <i class="icon" data-lucide="shield-check"></i>
+            <span>Deloitte Hackathon Winner – Secure Image Verification on Blockchain</span>
+          </a>
+          <!-- Add more project cards with icons like "server", "cloud", "code", etc. -->
+        </div>
+      </section>
+      
+      <section id="writing">
+        <h2>Writing</h2>
+        <p>Check out my writings on topics from JavaScript testing to Gödel’s Theorems</p>
+        <div class="grid">
+          <a href="pdf/Madden.Thesis19.pdf" target="_blank">
+            <i class="icon" data-lucide="book-open"></i>
+            <span>Gödel's Incompleteness Theorems – Senior Thesis</span>
+          </a>
+          <a href="pdf/An Introduction to Topological Data Analysis.pdf" target="_blank">
+            <i class="icon" data-lucide="graph"></i>
+            <span>Intro to Topological Data Analysis – Published at Deloitte</span>
+          </a>
+        </div>
+      </section>
+      
 
     <section id="contact">
       <h2>Contact</h2>
@@ -188,6 +214,9 @@
       <p>LinkedIn: <a href="https://www.linkedin.com/in/kailee-madden-b28ab6b9/" target="_blank">linkedin.com/kailee-madden</a></p>
     </section>
   </main>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
 
