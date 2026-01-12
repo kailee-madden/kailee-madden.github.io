@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "name": "Kailee Madden",
+    "title": "Senior Software Engineer",
+    "image": "images/IMG_5388.png",
+    "imageAlt": "Kailee Madden's Headshot"
+  },
+  "summary": "I'm a backend-focused senior engineer building scalable, secure systems in AWS and Azure. I've led the development of cloud-native APIs, serverless apps, and real-time data platforms used by 100k+ users daily. I'm passionate about clean architecture, performance, and user value.",
+  "education": [
+    {
+      "degree": "Master of Science in Computational Science, Mathematics and Engineering",
+      "school": "University of California San Diego"
+    },
+    {
+      "degree": "Bachelor of Arts in Mathematics and History",
+      "school": "University of Notre Dame"
+    }
+  ],
+  "contact": {
+    "email": "kailee.madden@gmail.com",
+    "github": "https://github.com/kailee-madden",
+    "linkedin": "https://www.linkedin.com/in/kailee-madden-b28ab6b9/",
+    "resume": "pdf/Kailee.Madden.SeniorSoftwareEngineer.Resume.pdf"
+  },
+  "projects": [
+    {
+      "title": "Deloitte Hackathon Winner – Secure Image Verification on Blockchain",
+      "url": "https://github.com/kailee-madden/Deloitte-2021-Blockchain-Hackathon",
+      "icon": "shield-check"
+    }
+  ],
+  "writing": [
+    {
+      "title": "Gödel's Incompleteness Theorems – Senior Thesis",
+      "url": "pdf/Madden.Thesis19.pdf",
+      "icon": "book-open"
+    },
+    {
+      "title": "Intro to Topological Data Analysis – Published at Deloitte",
+      "url": "pdf/An Introduction to Topological Data Analysis.pdf",
+      "icon": "torus"
+    }
+  ]
+}
